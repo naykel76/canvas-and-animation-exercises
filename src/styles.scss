@@ -1,0 +1,9 @@
+@use "node_modules/nk_jtb/src/base/vars_base" as * with (
+    $text: rgb(228, 232, 236),
+    $background: #0b101d,
+    $primary: #2876dc,
+    $secondary: #e1e1df,
+    $accent: #e6c637
+);
+
+@use "node_modules/nk_jtb/src/jtb";
