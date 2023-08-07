@@ -14,13 +14,21 @@ export class Piece {
 
     /**
      * Move the piece, clear the canvas and render in the new position
-     * @param {Position} piece - The position by which to move the piece.
+     * @param {Position} piece - The position by which to move the piece
      */
     move(piece: Position) {
         this.x = this.x + piece.x;
         this.y = this.y + piece.y;
         this.clear();
         this.render();
+    }
+
+    /**
+     * Get the current position of the piece
+     * @returns {Position} The x & y position of the piece
+     */
+    getCurrentPosition(): Position {
+        return { x: this.x, y: this.y };
     }
 
     /**

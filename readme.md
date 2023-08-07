@@ -30,7 +30,7 @@ npm run preview
     - [x] Keys
     - [x] Position
 - [x] Move piece with keyboard
-- [ ] Boundary detection
+- [x] Boundary detection
 - [ ] Collision detection
 - [ ] Animation
     - [ ] `setInterval`
