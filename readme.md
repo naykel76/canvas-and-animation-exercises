@@ -20,3 +20,21 @@ Preview build project:
 ```bash
 npm run preview
 ```
+
+## The List
+
+- [x] Setup and configuration
+- [x] Create classes for Canvas, and Piece
+- [ ] Interfaces
+    - [x] Keys
+    - [ ] Position
+- [ ] Move piece with keyboard
+- [ ] Collision detection
+- [ ] Animation
+    - [ ] `setInterval`
+    - [ ] `requestAnimationFrame`
+- [ ] Bounce off walls
+- [ ] Add items on canvas and detect collision
+- [ ] Configuration
+    - [ ] Input to set canvas size
+    - [ ] Slider to set canvas size
