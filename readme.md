@@ -26,9 +26,11 @@ npm run preview
 - [x] Setup and configuration
 - [x] Create classes for Canvas, and Piece
 - [ ] Interfaces
+    - [x] Config
     - [x] Keys
-    - [ ] Position
-- [ ] Move piece with keyboard
+    - [x] Position
+- [x] Move piece with keyboard
+- [ ] Boundary detection
 - [ ] Collision detection
 - [ ] Animation
     - [ ] `setInterval`
