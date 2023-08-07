@@ -3,18 +3,6 @@ import { handleKeyPress } from './canvas-exercise/controls';
 import { setup } from './canvas-exercise/setup';
 import './styles.scss'
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-    <div class="container flex flex-start items-start ha-c gg-2 py-5">
-        <canvas id="canvas" class="bdr-red bdr-3"></canvas>
-        <div class="grid cols-2 ha-t">
-            <div class="start-interval btn primary">Start Interval</div>
-            <div class="stop-interval btn danger">Stop Interval</div>
-            <div class="start-animation btn primary">Start Animation</div>
-            <div class="stop-animation btn danger">Stop Animation</div>
-        </div>
-    </div>
-`
-
 // ==========================================================================
 
 // initialise the setup and make ctx available globally

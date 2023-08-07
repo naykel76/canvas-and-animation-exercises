@@ -45,3 +45,4 @@ npm run preview
 - [ ] Sound
     - [ ] Keystroke effects
     - [ ] Music
+- [ ] Create a dismissible modal
