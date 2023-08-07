@@ -32,11 +32,16 @@ npm run preview
 - [x] Move piece with keyboard
 - [x] Boundary detection
 - [ ] Collision detection
-- [ ] Animation
-    - [ ] `setInterval`
-    - [ ] `requestAnimationFrame`
-- [ ] Bounce off walls
+- [ ] Animate a moving piece
+    - [x] `setInterval`
+    - [x] `requestAnimationFrame`
+    - [ ] Respect boundaries
+    - [ ] Collision detection
+    - [ ] Bounce
 - [ ] Add items on canvas and detect collision
 - [ ] Configuration
     - [ ] Input to set canvas size
     - [ ] Slider to set canvas size
+- [ ] Sound
+    - [ ] Keystroke effects
+    - [ ] Music
