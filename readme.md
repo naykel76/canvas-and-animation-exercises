@@ -46,3 +46,4 @@ npm run preview
     - [ ] Keystroke effects
     - [ ] Music
 - [ ] Create a dismissible modal
+- [ ] Persistent storage for settings

@@ -7,3 +7,7 @@
 );
 
 @use "node_modules/nk_jtb/src/jtb";
+
+.c-mt-0 > * {
+    margin-top: 0;
+}

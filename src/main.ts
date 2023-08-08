@@ -1,19 +1,26 @@
 import { Canvas } from './canvas-exercise/canvas';
 import { handleKeyPress } from './canvas-exercise/controls';
-import { setup } from './canvas-exercise/setup';
+import { SetupConfig } from './canvas-exercise/setup';
+import { Config } from './defs';
 import './styles.scss'
 
 // ==========================================================================
 
-// initialise the setup and make ctx available globally
-let ctx: CanvasRenderingContext2D = setup();
+// Create an instance of the SetupConfig with initial settings
+const setup = new SetupConfig({ width: 400, height: 400, scale: 20 });
+
+// Direct access to the setup config
+const config: Config = setup.config;
+
+// Get the canvas rendering context using the getCanvasContext method
+const ctx: CanvasRenderingContext2D = setup.getCanvasContext();
 
 // initialise the canvas and pass in the context
 let canvas: Canvas = new Canvas(ctx);
 
 // ==========================================================================
 
-document.addEventListener('keydown', (event) => handleKeyPress(event, ctx, canvas));
+document.addEventListener('keydown', (event) => handleKeyPress(event, config, canvas));
 
 // ==========================================================================
 
