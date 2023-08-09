@@ -1,6 +1,6 @@
-import { Piece } from "./piece";
+import { Piece } from "./Piece";
 
-export class Canvas {
+export class Board {
 
     piece: Piece;
 

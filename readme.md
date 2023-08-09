@@ -23,8 +23,8 @@ npm run preview
 
 ## The List
 
-- [x] Setup and configuration
-- [x] Create classes for Canvas, and Piece
+- [x] Setup and game configuration
+- [x] Create classes for Board, and Piece
 - [ ] Interfaces
     - [x] Config
     - [x] Keys
@@ -38,10 +38,10 @@ npm run preview
     - [ ] Respect boundaries
     - [ ] Collision detection
     - [ ] Bounce
-- [ ] Add items on canvas and detect collision
+- [ ] Add items on board and detect collision
 - [ ] Configuration
-    - [ ] Input to set canvas size
-    - [ ] Slider to set canvas size
+    - [ ] Input to set board size
+    - [ ] Slider to set board size
 - [ ] Sound
     - [ ] Keystroke effects
     - [ ] Music

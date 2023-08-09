@@ -1,7 +1,7 @@
 import { Config, KEYS } from '../defs.d';
-import { Canvas } from './canvas';
+import { Board } from './Board';
 
-export function handleKeyPress(event: KeyboardEvent, config: Config, canvas: Canvas): void {
+export function handleKeyPress(event: KeyboardEvent, config: Config, board: Board): void {
 
     const key: string = event.key;
 
@@ -9,7 +9,7 @@ export function handleKeyPress(event: KeyboardEvent, config: Config, canvas: Can
 
         event.preventDefault();
 
-        let piece = canvas.piece;
+        let piece = board.piece;
 
         /**
          * Position before moving

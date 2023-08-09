@@ -1,26 +1,26 @@
-import { Canvas } from './canvas-exercise/canvas';
+import { Board } from './canvas-exercise/Board';
 import { handleKeyPress } from './canvas-exercise/controls';
-import { SetupConfig } from './canvas-exercise/setup';
+import { GameConfig } from './canvas-exercise/GameConfig';
 import { Config } from './defs';
 import './styles.scss'
 
 // ==========================================================================
 
-// Create an instance of the SetupConfig with initial settings
-const setup = new SetupConfig({ width: 400, height: 400, scale: 20 });
+// Create an instance of the GameConfig with initial settings
+const setup = new GameConfig({ width: 400, height: 400, scale: 20 });
 
 // Direct access to the setup config
 const config: Config = setup.config;
 
 // Get the canvas rendering context using the getCanvasContext method
-const ctx: CanvasRenderingContext2D = setup.getCanvasContext();
+const ctx = setup.getCanvasContext();
 
-// initialise the canvas and pass in the context
-let canvas: Canvas = new Canvas(ctx);
+// initialise the board and pass in the canvas context
+let board = new Board(ctx);
 
 // ==========================================================================
 
-document.addEventListener('keydown', (event) => handleKeyPress(event, config, canvas));
+document.addEventListener('keydown', (event) => handleKeyPress(event, config, board));
 
 // ==========================================================================
 
@@ -30,7 +30,7 @@ document.querySelector('.stop-interval')?.addEventListener('click', () => stopIn
 let stepInterval: number | undefined; // Declare variable for reference
 
 function startInterval(time: number = 500) {
-    let piece = canvas.piece;
+    let piece = board.piece;
     // prevents interval from compounding
     if (!stepInterval) {
         stepInterval = setInterval(() => {
@@ -64,7 +64,7 @@ function startAnimation() {
 }
 
 function animate() {
-    let piece = canvas.piece;
+    let piece = board.piece;
     piece.move({ x: speed, y: 0 })
     // Use requestAnimationFrame for the next frame
     animateId = requestAnimationFrame(animate);
@@ -74,5 +74,3 @@ function stopAnimation() {
     cancelAnimationFrame(animateId);
     animationRunning = false; // Reset animation status
 }
-
-// ==========================================================================

@@ -1,19 +1,19 @@
 import { Config } from "../defs";
 
-export class SetupConfig {
+export class GameConfig {
 
     private ctx: CanvasRenderingContext2D | null = null;
 
     constructor(public config: Config) {
-        this.setupCanvas();
+        this.setupGameBoard();
     }
 
     /**
      * Sets up the canvas element and its rendering context.
      */
-    setupCanvas(): void {
+    setupGameBoard(): void {
         // Find the canvas element
-        const canvas = document.querySelector<HTMLCanvasElement>('#canvas');
+        const canvas = document.querySelector<HTMLCanvasElement>('#board');
 
         // Check if the canvas element exists
         if (!canvas) {
