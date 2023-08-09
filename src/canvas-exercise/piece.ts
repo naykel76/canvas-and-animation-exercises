@@ -7,7 +7,13 @@ export class Piece {
         public x: number = 1,
         public y: number = 1,
         private color: string = 'orange',
-        private scale: number = 1,
+        private shape = [
+            [0, 0, 1, 0, 1, 0, 0],
+            [1, 0, 0, 0, 0, 0, 1],
+            [1, 0, 0, 0, 0, 0, 1],
+            [0, 1, 0, 0, 0, 1, 0],
+            [0, 0, 1, 1, 1, 0, 0]
+        ]
     ) {
         this.render();
     }
@@ -43,6 +49,12 @@ export class Piece {
      */
     render() {
         this.ctx.fillStyle = this.color;
-        this.ctx.fillRect(this.x, this.y, this.scale, this.scale);
+        this.shape.forEach((row, y) => {
+            row.forEach((value, x) => {
+                if (value > 0) {
+                    this.ctx.fillRect(this.x + x, this.y + y, 1, 1);
+                }
+            });
+        });
     }
 }
